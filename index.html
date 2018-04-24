@@ -46,16 +46,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript">
-      $( "button" ).click(function() {
+      $( "input,textarea" ).blur(function() {
          var url = $("#url").val();
          var title = $("#title").val();
          var description = $("#description").val();
 
          var html = title;
          var html = html+"\n";
+
          if(description) {
-           var html = html+description;
            var html = html+"\n";
+           var html = html+description;
            var html = html+"\n";
          }   
          var html = html+"\n";      
