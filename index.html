@@ -29,6 +29,7 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Description</label>
           <textarea id="description" class="form-control"></textarea>
+          <span class="clear-desc" style="cursor: pointer;">Clear</span>
           
         </div>
         <hr>
@@ -36,7 +37,7 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Output</label>
           <textarea id="output" class="form-control" rows="10"></textarea>
-          
+          <button type="button" id="copy">Copy</button>
         </div>
         
         
@@ -65,6 +66,14 @@
 
          
       });
+      $( "#copy" ).click(function() {
+         $("#output").select();
+         document.execCommand('copy');
+      });
+      $( ".clear-desc" ).click(function() {
+         $("#description").val('');
+      });
+
     </script>
 
   </body>
